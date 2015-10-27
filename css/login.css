@@ -64,7 +64,7 @@ color: #a3caf9;
     position: absolute;
     left: 50%;   
     margin-left: -200px;
-    top : 200px;
+    top : calc(50% - 181px);
 }
 
 
