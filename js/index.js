@@ -16,9 +16,9 @@ var Postfile_selected = false;
 var Cmtfile_selected = false;
 function init(){
 
-    new_hl = document.getElementsByClassName("category")[0];
-    pop_hl = document.getElementsByClassName("category")[1];
-    tru_hl = document.getElementsByClassName("category")[2];
+    new_hl = document.getElementsByClassName("sorttype")[0];
+    pop_hl = document.getElementsByClassName("sorttype")[1];
+    tru_hl = document.getElementsByClassName("sorttype")[2];
     contents_container=document.getElementsByClassName("contents_container")[0];
     Contents=document.getElementsByClassName("posts_box");
 }
@@ -28,12 +28,9 @@ function clikedWriteButton(obj){
 function ClickedNew(){
     var new1;
     var new2;
-    new_hl.style.backgroundColor="rgba(255,255,255,0.3)";
-    new_hl.style.color="white";
+    new_hl.style.backgroundColor="rgba(255,255,255,0.1)";
     pop_hl.style.backgroundColor="transparent";
-    pop_hl.style.color="#aeaeae";
     tru_hl.style.backgroundColor="transparent";
-    tru_hl.style.color="#aeaeae";
 
     for(var j=0;j<Contents.length;j++){
         for(var i=0;i<Contents.length-1;i++){
@@ -52,12 +49,9 @@ function ClickedNew(){
 function ClickedPop(){
     var popular;
     var popular2;
-    new_hl.style.backgroundColor="transparent";
-    new_hl.style.color="#aeaeae";
-    pop_hl.style.backgroundColor="rgba(255,255,255,0.3)";
-    pop_hl.style.color="white";
+    new_hl.style.backgroundColor="transparent"
+    pop_hl.style.backgroundColor="rgba(255,255,255,0.1)";
     tru_hl.style.backgroundColor="transparent";
-    tru_hl.style.color="#aeaeae";
     for(var j=0;j<Contents.length;j++){
         for(var i=0;i<Contents.length-1;i++){
             popular=parseInt(Contents[i].getAttribute("popular"));
@@ -81,15 +75,9 @@ var swapElements = function(siblings, subjectIndex, objectIndex) {
 function ClickedTru(){
     var trust;
     var trust2;
-    var new_hl = document.getElementsByClassName("category")[0];
-    var pop_hl = document.getElementsByClassName("category")[1];
-    var tru_hl = document.getElementsByClassName("category")[2];
     new_hl.style.backgroundColor="transparent";
-    new_hl.style.color="#aeaeae";
     pop_hl.style.backgroundColor="transparent";
-    pop_hl.style.color="#aeaeae";
-    tru_hl.style.backgroundColor="rgba(255,255,255,0.3)"
-    tru_hl.style.color="white";
+    tru_hl.style.backgroundColor="rgba(255,255,255,0.1)";
     
     for(var j=0;j<Contents.length;j++){
         for(var i=0;i<Contents.length-1;i++){
@@ -103,6 +91,20 @@ function ClickedTru(){
         }
     }
 }
+
+function ClickedCat(){
+    var cbtn_hl = document.getElementById("f_nav_category");
+    var cat_hl = document.getElementById("sidebar_right");
+    cbtn_hl.style.backgroundColor="rgba(0,0,0,0.3)";
+    cbtn_hl.style.color="white";
+    cat_hl.style.left = 240+"px";
+}
+
+function SelectedCat(){
+    var cat_hl = document.getElementById("sidebar_right");
+    cat_hl.style.left = 0+"px";
+}
+
 function ClickedContent(obj){
     console.log(obj.innerHTML);
 }
@@ -131,15 +133,15 @@ var InputImage_Post =
 
             ImgReader.onload = function (Event) {
                 if (!ImagePre) {
-                    var newPreview = document.getElementById("imagePreview_Post");
-                    document.getElementById("post_btns_container").style.height= "120px";
+                    var plus = document.getElementById("plus_img_box");
+                    var newPreview = document.getElementsByClassName("imagePreview_Post");
                     ImagePre = new Image();
-                    ImagePre.style.position = "absolute";
+                    ImagePre.style.position = "relative";
                     ImagePre.style.width = "100px";
                     ImagePre.style.height = "100px";
-                    ImagePre.style.paddingTop = "20px";
-                    ImagePre.style.paddingLeft = "50px";
+                    newPreview.style.display = "inline-block";
                     newPreview.appendChild(ImagePre);
+                    plus.style.display="inline-block";
                 }
                 ImagePre.src = Event.target.result;
 
@@ -256,10 +258,15 @@ var InputImage_popCmt =
 function resize(obj) {
     obj.style.height = "0px";
     if(!Postfile_selected){
-        obj.style.height = (-4+obj.scrollHeight)+"px";
+        obj.style.height = (obj.scrollHeight)+"px";
     } else {
-        obj.style.height = (-4+obj.scrollHeight)+"px";
+        obj.style.height = (obj.scrollHeight)+"px";
     }
+}
+
+function resize_postCmt(obj) {
+    obj.style.height = "0px";
+        obj.style.height = (obj.scrollHeight)+"px";
 }
 
 function resize_Cmt(obj) {
@@ -289,19 +296,6 @@ function resize_popCmt(obj) {
         a.style.height = (151+obj.scrollHeight)+"px";
     }
 }
-/*
-$(window).scroll(function() {
-    var scroll = $(window).scrollTop();
-    if(scroll > position) {
-         
-        // scrolling downwards
-    } else {
-         
-        // scrolling upwards
-    }
-    position = scroll;
-});
-*/
 
 function popup_menu_in(event){
     var a = document.getElementById("popup_menu");

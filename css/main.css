@@ -14,7 +14,6 @@
     src: url(../font/Cocomat_Ultralight-trial) format('truetype');
 }
 
-
 #topnav {
     position: fixed;
     width: 100%;
@@ -23,12 +22,6 @@
     background-size: 100% 70px;
     z-index: 5;
 }
-
-
-
-
-
-
 
 .top_search_icon {
     position: absolute;
@@ -125,7 +118,7 @@
 
 
 
-#sidebar {
+#sidebar_left {
     position: fixed;
     background-color: #362f2d;
     width : 240px;
@@ -139,16 +132,12 @@
 #dim_background {
     position: fixed;
     background-color: #000;
-    opacity: 0;
+    opacity: 0.3;
     width: 100%;
     height: 100%;
-    z-index: -10;
+    z-index: -5;
     transition: 0.3s ease;
 }
-
-
-
-
 
 #delete_container {
     position: fixed;
@@ -171,16 +160,6 @@
     -webkit-transition: 0.5 ease-in-out;
 }
 
-
-
-
-
-
-
-
-
-
-
 #search_out {
     position: fixed;
     width: 20%;
@@ -193,24 +172,10 @@
     -webkit-transition: 0.5 ease-in-out;
 }
 
-
-
 .list_thumbnail {
     height: 13px;
     padding-left: 10px;
     padding-right: 10px;
-}
-
-
-
-
-
-copy {
-    position: absolute;
-    width: 100%;
-    top: 80px;
-    font-size: 8px;
-    left: 0;
 }
 
 footer {
@@ -223,10 +188,9 @@ footer {
 
 #f_nav_logo {
     position: absolute;
-    width: 70%;
-    left: 10%;
+    width: 80%;
     top: 30px;
-    left: 15%;
+    left: 10%;
 }
 
 
@@ -241,13 +205,13 @@ body {
     background-color: #d5d5d5;
 }
 
-.category {
+.sorttype {
     display: block;
     height: 48px;
     width: 100%;
     padding-left: 30px;
     background: transparent;
-    color: #aeaeae;
+    color: #aaa;
     font-size: 1em;
     transition: 0.3s ease;
     border: transparent;
@@ -255,16 +219,13 @@ body {
     border-bottom: solid 1px #5d5856;
     margin-top: -1px;
     text-align: left;
-    
 }
-.category:hover {
+.sorttype:hover {
     color: #fff;
     text-decoration: none;
     background-color: rgba(255,255,255,0.3);
     transition: 0.3s ease;
 }
-
-
 
 #search_sidebar {
     margin-top: 5px;
@@ -274,10 +235,6 @@ body {
     padding: 10px 0;
     border-bottom: solid 2px #858180;
 }
-
-
-
-
 
 #contents_container {
     position: absolute;
@@ -307,20 +264,15 @@ body {
     transition: 0.3s ease;
 }
 
-
-
 .textarea {
     position: relative;
-    width: 90%;
-    padding: 15px 5%;
+    width: 94%;
+    padding: 20px 3%;
     top: -10px;
-    font-size: 0.8em;
+    font-size: 1em;
     border-top-left-radius: 3px;
     border-top-right-radius: 3px;
 }
-
-
-
 
 html{
     height:100%;
@@ -376,8 +328,8 @@ textarea{
     display: inline-block;
     position:relative;
     float: right;
-    top: 9px;
-    hegith : 30px;
+    top: 12px;
+    height : 38px;
 }
 
 .Contents{
@@ -402,22 +354,20 @@ textarea{
     overflow-x: hidden;
 }
 
-
-
 label {
     cursor: pointer;
 }
 
 .button {
-border-radius: 1px;
-  font-family: Arial;
-  color: #ffffff;
-  font-size: 0.8em;
-  background: #362f2d;
-  padding: 7px 15px 7px 15px;
+    border-radius: 1px;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 0.8em;
+    background: #362f2d;
+    padding: 7px 15px 7px 15px;
     margin: 5px;
     border: transparent;
-  text-decoration: none;
+    text-decoration: none;
     width : 100px;
     margin-top: -10px;
     margin-right: 10px;
@@ -443,8 +393,7 @@ border-radius: 1px;
     width: 100%;
     height: 50px;
     padding:3px 0;
-    margin-top: -10px;
-    margin-left: -10px;
+    margin-top: -20px;
     transition: 0.3s ease;
 }
 
@@ -501,11 +450,11 @@ border-radius: 1px;
             height: 25px;
             margin-top: -4px;
         }
-    }
+}
 @media only screen 
     and (min-width: 1000px) {
 
-    }
+}
 
 .posted_contents_container {
     width: 100%;
@@ -559,8 +508,6 @@ border-radius: 1px;
     border-radius: 3px;
 }
 
-
-
 #commentarea {
     position: absolute;
     left: 50px;
@@ -574,8 +521,6 @@ border-radius: 1px;
     background-color: transparent;
 }
 
-
-
 #submit_cmt {
     display: inline-block;
     margin-top: 5px;
@@ -585,12 +530,12 @@ border-radius: 1px;
     float: right;
     text-align: center;
     border-radius: 1px;
-  font-family: Arial;
-  color: #ffffff;
-  font-size: 0.4em;
-  background: #362f2d;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 0.4em;
+    background: #362f2d;
     border: transparent;
-  text-decoration: none;
+    text-decoration: none;
 }
 
 #upload_pic {
@@ -606,8 +551,6 @@ border-radius: 1px;
     margin-top: -12.5px;
 }
 
-
-
 #Cmt_file {
     display: none;
 }
@@ -616,7 +559,13 @@ border-radius: 1px;
     display: none;
 }
 
-#imagePreview_Post {
+.imagePreview_Post {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    display: none;
+    border: 1px solid #999;
+    margin-left: 30px;
 }
 
 #search_submit {
@@ -642,8 +591,6 @@ border-radius: 1px;
     width: 90%;
     top: 5px;
 }
-
-
 
 #popup_comment_box {
     position: fixed;
@@ -708,13 +655,11 @@ border-radius: 1px;
     box-shadow: 0px 2px 3px -1px rgba(100, 100, 100, 0.8);
 }
 
-
-
 .right_popup_comment_container {
     float: right;
     width: calc(100% - 80px);
     height: auto;
-    
+
 }
 
 #popup_name {
@@ -742,11 +687,11 @@ border-radius: 1px;
     height: 12px;
     background-repeat: no-repeat;
     background-size: contain;
-    
+
 }
 
 #pop_Cmt_file {
-        display: none;
+    display: none;
 }
 
 #pop_upload_pic {
@@ -757,7 +702,7 @@ border-radius: 1px;
 }
 
 #pop_upload_pic_height {
-     position: relative;
+    position: relative;
     top: 50%;
     margin-top: -12.5px;
 }
@@ -784,12 +729,12 @@ border-radius: 1px;
     float: right;
     text-align: center;
     border-radius: 1px;
-  font-family: Arial;
-  color: #ffffff;
-  font-size: 0.4em;
-  background: #362f2d;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 0.4em;
+    background: #362f2d;
     border: transparent;
-  text-decoration: none;
+    text-decoration: none;
 }
 
 #pop_comment {
@@ -806,7 +751,7 @@ border-radius: 1px;
 }
 
 #close_comment {
-        float: right;
+    float: right;
     height: 15px;
 }
 
@@ -856,8 +801,6 @@ border-radius: 1px;
     opacity: 0;
 }
 
-
-
 #popup_menu {
     position: absolute;
     width: 60px;
@@ -885,14 +828,18 @@ border-radius: 1px;
     text-align: center;
 }
 
-
-
 #profile_logout {
-    position: relative;
-    top: 57px;
+    position: absolute;
+    text-align: center;
+    width: 240px;
+    left: 0px;
+    bottom: 30px;
     display: inline-block;
-    font-size: 0.7em;
-    color: #aaa;
+    font-size: 1.2em;
+    color: #ccc;
+}
+#profile_logout:hover {
+    text-decoration: underline;
 }
 
 .upload {
@@ -901,7 +848,7 @@ border-radius: 1px;
     bottom: 0px;
     text-align: center;
     vertical-align: middle;
-    
+
 }
 
 .intro_img {
@@ -915,7 +862,7 @@ border-radius: 1px;
 }
 
 .intro_name {
-     display: inline-block;
+    display: inline-block;
 }
 
 .intro_text {
@@ -966,10 +913,6 @@ border-radius: 1px;
     float :left;
 }
 
-
-
-
-
 .list {
     margin: 0px;
     overflow: hidden;
@@ -977,7 +920,7 @@ border-radius: 1px;
 }
 
 #f_nav_profile_container {
-    margin-top: 100px;
+    margin-top: 110px;
     text-align: center;
 }
 
@@ -986,13 +929,6 @@ border-radius: 1px;
     margin-top : 30px;
     font-size: 1.5em;
     font-weight: 200;
-}
-
-
-
-.contents_spacer {
-    width: 100%;
-    height: 55px;
 }
 
 #topbar_iconbox {
@@ -1033,17 +969,63 @@ border-radius: 1px;
     margin-left: -49px;
 }
 
-.input_img_box {
-    position: relative;
-    display: inline-block;
-    width: 100px;
-    height: 100px;
-    border: 1px solid black;
-    /* 이미지 부분 코딩 완료하면 보더 지우기! */
-    margin: 10px;
-    margin-right: 0px;
-    margin-bottom: 30px;
+#f_nav_category {
+    position : relative;
+    vertical-align: middle;
+    line-height: 3em;
+    padding-left: 30px;
+    color: #aeaeae;
+    font-size: 1em;
+    top: 110px;
+    height: 46px;
+    border-top: 2px solid #5d5856;
+    border-bottom: 2px solid #5d5856;
+    z-index: 5;
+    transition: 0.3s ease;
 }
+#f_nav_category:hover {
+    color: #fff;
+    text-decoration: none;
+    background-color: rgba(255,255,255,0.3);
+}
+
+#arrow {
+    width: 7px;
+    height: 12px;
+    float: right;
+    margin-right: 15px;
+    margin-top: 17px;
+}
+
+#sidebar_right {
+    position: fixed;
+    width: 240px;
+    padding-top: 57px;
+    height: calc(100% - 57px);
+    background-color: #221e1c;
+    z-index: 6;
+    left: 0px;
+    transition: 1s;
+}
+
+.category {
+    position: relative;
+    color: #bbb;
+    height: 47px;
+    padding-left: 30px;
+    font-size: 1em;
+    vertical-align: middle;
+    line-height: 3.1em;
+    border-bottom: 1px solid #2f2c2a;
+    margin-top: -1px;
+    transition: 0.5s;
+}
+.category:hover {
+    background-color: #d6c492;
+    color: #221e1c;
+}
+
+
 
 .input_img_box img{
     width: 100px;
@@ -1069,17 +1051,121 @@ border-radius: 1px;
 }
 #plus_img_box {
     position: relative;
-    display: inline-block;
+    display: none;
     width: 100px;
     height: 100px;
     border: 1px solid black;
     /* 이미지 부분 코딩 완료하면 보더 지우기! */
     margin: 10px;
     margin-right: 0px;
-    margin-bottom: 30px;
     /* 개씹 야매 이거 꼭 고쳐야함 */
     top: -46px;
     background-color: #e2e2e2;
     text-align: center;
     line-height: 100px;
+}
+
+
+.comment_all {
+    position: relative;
+}
+
+.comment {
+    position: relative;
+    margin-top: 10px;
+    font-size: 14px;
+    width :100%;
+}
+
+.comment_intro {
+    position: relative;
+    margin-top: 10px;
+    width : 100%;
+}
+
+.comment_image {
+    position: relative;
+    display: inline-block;
+    width :60px;
+    height : 60px;
+    float :left;
+
+}
+
+.comment_name {
+    position: relative;
+    display :inline-block;
+    font-size : 14px;
+    font-weight: bold;
+
+}
+
+.comment_date {
+    position: relative;
+    display: inline-block;
+}
+
+.write_input {
+    position: relative;
+    margin-top: 10px;
+    font-size : 1em;
+    padding: 7px;
+    width : 680px;
+    height: auto;
+    border: 1px solid #aaa;
+    display : inline-block;
+}
+
+.write_submit {
+    position: relative;
+    display :inline-block;
+    width : 70px;
+    height :30px;
+    background-color : gray;
+    color : white;
+    text-align: center;
+    line-height: 30px;
+    margin-left: 10px;
+    top: -10px;
+}
+
+.comment_content {
+    margin-top: 15px;
+    position: relative;
+    width :700px;
+    font-size: 1em;
+    top: -10px;
+    word-break: break-all;
+    display: inline-block;
+}
+
+.comment_nd {
+    position: relative;
+    display : inline-block;
+    float :left;
+}
+
+.comment_ndc {
+    display: inline-block;
+    position: relative;
+    height : 60px;
+    width : 700px;
+    left : 10px;
+}
+
+.write_textarea {
+    height: 1em;
+}
+
+#a {
+    width : 100px;
+    height : 100px;
+    background-color: red;
+}
+
+
+
+.comment_write {
+    position: relative;
+    margin-top: 20px;
 }
