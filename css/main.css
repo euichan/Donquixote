@@ -330,6 +330,7 @@ textarea{
     float: right;
     top: 12px;
     height : 38px;
+    right: 10px;
 }
 
 .Contents{
@@ -1169,6 +1170,7 @@ label {
     margin-top: 20px;
 }
 
+<<<<<<< HEAD
 
 /*알림 팝업 css 조늬찬상*/
 .noti_container
@@ -1260,4 +1262,44 @@ label {
     display: inline-block;
     border: 1px solid black;
     width: calc(100% - 250px;)
+=======
+#categorySelect_Rate_Container {
+    height: auto;
+    position: relative;
+    width: calc(100% - 40px);
+    padding: 5px 0;
+    border: 1px solid #ddd;
+    border-left: transparent;
+    border-right: transparent;
+    margin-left: 20px;
+    z-index: 1;
+}
+
+#category_select_box select {
+    position: absolute;
+    top: 1.5px;
+    background: transparent;
+    width: 105px;
+    font-size: 0.7em;
+    color: #7d7d7d;
+    padding: 5px;
+    margin-left: 10px;
+    border: 0;
+    border-radius: 0;
+    -webkit-appearance: none;
+}
+
+#category_select_box {
+    height: 15px;
+    width: 115px;
+}
+
+.arrowdown {
+    float: right;
+    margin-right: -13px;
+    color: #7d7d7d;
+    vertical-align: middle;
+    line-height: 1.6em;
+    font-size: 0.6em;
+>>>>>>> origin/woojin
 }
